@@ -12,4 +12,4 @@ Hello! I'm a Master student at GIST <a href = "https://www.biil-gist.net/"> BIIL
 My major in grudate school is Artificial intelligence. I received my undergraduate degree from Computer Science and Engineering at <a href = "https://www.jbnu.ac.kr/kor/"> JBNU </a>
 
 **Contact information**  
-chchine33@gm.gist.ac.kr
+chjin1013@gm.gist.ac.kr
