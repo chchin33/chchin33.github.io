@@ -8,4 +8,5 @@ redirect_from:
   - /about.html
 ---
 
-Hello! I'm a Master student at GIST BIIL Lab which led by prof. H.J Nam. I am interested in drug discovery using AI, especially in drug design.
+Hello! I'm a Master student at BIIL Lab which led by prof. H.J Nam. I am interested in drug discovery using AI, especially in drug design with generative model.
+My major in grudate school is Artificial intelligence. I received my undergraduate degree from Computer Science and Engineering at JBNU
