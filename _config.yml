@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "CH Jin / CH Jin's blog"
+title                    : "CH Jin's blog"
 title_separator          : "-"
 name                     : &name "CH Jin"
 description              : &description "personal description"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "CH Jin"
   avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
+  bio              : # "Your biography for the left-hand sidebar"
   location         : "Gwangju, Korea"
   employer         :
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
