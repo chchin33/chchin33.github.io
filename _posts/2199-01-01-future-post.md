@@ -35,4 +35,19 @@ In order to provide more valuable and practical assistance to drivers, we have c
 ## 6. Reflection
 In this project, we have successfully implemented our system to run on the On-Device (Jetson Nano). As part of our future plans, we aim to connect the black box with the Jetson Nano to capture real-time video of the driving conditions. We intend to develop a mobile app that displays the safe distance in real time as a tool to assist the driver. To achieve this, we need to build our system which includes the mobile app and the black box. In addition, we will design a user-friendly interface for the app to make it convenient for the users. In our system, it is important to minimise distraction so that the driver’s view is not obstructed and can be easily glanced at without causing undue distraction. Therefore, designing a clear user interface that does not distract the driver is crucial for our system in the future.
 
-## 7. Broader Impacts
+## 7. Broader Impacts  
+We explain (1) Intended use, (2) Unintended use and the associated harms, and (3) Design decisions to mitigate harms  
+
+### 7.1. Intented Use  
+- Enhanced Road Safety: Our application is to promote road safety by providing drivers with real-time information about the safe distance between their vehicle and the car in front. This can help reduce the risk of accidents caused by insufficient following distance in this section.
+
+### 7.2. Unintened use and the associated harms  
+- Overreliance on Technology: There is a risk that some drivers may become overly reliant on the application and neglect other important aspects of safe driving, such as paying attention to road conditions and traffic signs. This could lead to complacency and an increased likelihood of accidents.
+- Distracted Driving: If the display of the safe distance is not designed with proper consideration for driver attention and distraction, it could potentially cause distraction and compromise the driver’s focus on the road.
+
+### 7.3. Design Decisions to Mitigate Harms:  
+- Clear User Interface: Our application design has prioritized developing a user interface that is intuitive, unobtrusive, and minimizes distraction. The display of the safe distance will be positioned in a manner that does not obstruct the driver’s view and can be easily glanced at without causing undue distraction.
+
+## References
+- [1] Marius Cordts, Mohamed Omran, Sebastian Ramos, Timo Rehfeld, Markus Enzweiler, Rodrigo Benenson, Uwe Franke, Stefan Roth, and Bernt Schiele. The cityscapes dataset for semantic urban scene understanding. In CVPR, 2016.
+- [2] Wenqiang Zhang, Zilong Huang, Guozhong Luo, Tao Chen, Xinggang Wang, Wenyu Liu, Gang Yu, and Chunhua Shen. Topformer: Token pyramid transformer for mobile semantic segmentation. In CVPR, 2022.
