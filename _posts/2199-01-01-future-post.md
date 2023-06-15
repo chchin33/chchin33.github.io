@@ -11,7 +11,7 @@ tags:
 ### The team
 
 - [Seonghoon Yu](https://www.notion.so/CV-886e631607144ec1b49637e95864f37a?pvs=4): seonghoon@gm.gist.ac.kr
-- [Chihyeon Jin](https://chchin33.github.io/): 
+- [Chihyeon Jin](https://chchin33.github.io/): chjin1013@gm.gist.ac.kr
 - [Seokwoo Jang](https://melodic-plantain-1e0.notion.site/Jang-Seok-Woo-Portfolio-513b52c79b8c4b4d80d21790274a480b): jangseokwoo@gm.gist.ac.kr
 - [Donggyu Choi](https://www.notion.so/Donggyu-Choi-deb0b2a368e6465e9c0ebe31d207f452): donggyuchoi@gist.ac.kr
 
