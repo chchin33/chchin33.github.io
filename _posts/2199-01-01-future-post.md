@@ -37,8 +37,8 @@ Through this training process, our model achieves impressive performance on the 
 In addition, to train our model on two different task (depth estimation and segmentation), we design loss function as follows. CE is for segmentation and MAE is for depth estimation.
 
 $Combined Loss = CE + MAE$  
-$CE = -\sum_i{C_i log(s_i)}$
-$MAE = -\frac{1}{n}\sum_{j=1}^n{\abs{y_j - \hat{y_j}}}$
+$CE = -\sum_i{C_i log(s_i)}$  
+$MAE = -\frac{1}{n}\sum_{j=1}^n{|y_j - \hat{y_j}|}$
 
 
 ## 4. System evaluation  
