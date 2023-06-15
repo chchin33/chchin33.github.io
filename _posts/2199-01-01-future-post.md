@@ -18,12 +18,12 @@ tags:
 ## 1. Problem definition  
 Keeping a safe distance from the car in front of the driver is crucial to prevent a car accident since it gives drivers enough time to react to unexpected situations. Figure 1 explains the importance of a safe distance. However, accurately determining a safe distance can be a challenge for many drivers, as it varies depending on the speed of the vehicles. In addition, drivers need to pay attention to several aspects of the driving environment. To address this issue, in our project, we present a driving assistance tool that provides drivers with real-time safe distance information to ensure their road safety.
 
-![Figure 1. Maintaining a safe distance prevents a car accident.]()
+![Figure 1. Maintaining a safe distance prevents a car accident.](https://github.com/chchin33/chchin33.github.io/blob/Blog_branch/images/DE%20Figure%201.png?raw=true)
 
 ## 2. System design  
 The overall system works in four steps, as illustrated in Figure 2. First, real-time video captured by an off-the-shelf camera is fed into the on-device component, specifically the Jetson Nano. We chose the Jetson Nano due to its similar hardware specifications to a mobile device, enabling realtime operation with mobile devices. Secondly, we operate an AI model on the Jetson Nano device to infer the depth information of the input video. Once the depth information is obtained, the outputs are post-processed to aggregate the depth information of the car in front. Finally, the system displays the aggregated depth information of the car in front which is a safe distance. This system allows real-time monitoring of the distance between the driver’s vehicle and the car in front.
 
-![Figure 2. Illustration of our overall system.]()
+![Figure 2. Illustration of our overall system.](https://github.com/chchin33/chchin33.github.io/blob/Blog_branch/images/DE%20Figure%202.png?raw=true)
 
 ## 3. Machine learning component  
 To accurately identify the car in front and estimate its depth information, we need an AI model that simultaneously performs depth estimation and semantic segmentation. Segmentation is responsible for identifying the car in front, while depth estimation infers the depth of the identified car. To achieve this, we attach a depth estimation module to the existing SoTA semantic segmentation model [2], as shown in Figure 3. Then, we train our modified model on Cityscape [1] dataset which contains a comprehensive collection of segmentation mask and depth GT information in the road environment. This will help the model to adapt to the real-world road driving simulation.  
@@ -32,7 +32,7 @@ To accurately identify the car in front and estimate its depth information, we n
 
 Through this training process, our model achieves impressive performance on the Cityscapes dataset on GPU system of Jetson Nano which is similar to the snapdragon 865 GPU. In Table 1, Our model shows a latency of 116 ms, 65.31 mIoU for segmentation accuracy, and 1.2337 rmse for depth estimation. These results demonstrate the effectiveness and accuracy of our trained AI model in identifying the car in front and providing reliable depth information. Using this depth information, we calculate a safe distance and display it in a real-time manner.
 
-![Figure 3. Illustration of our modified model. We attach a depth estimation module to the SoTA segmentation model [2].]()
+![Figure 3. Illustration of our modified model. We attach a depth estimation module to the SoTA segmentation model [2].](https://github.com/chchin33/chchin33.github.io/blob/Blog_branch/images/DE%20Figure%203.png?raw=true)
 
 In addition, to train our model on two different task (depth estimation and segmentation), we design loss function as follows. CE is for segmentation and MAE is for depth estimation.
 
@@ -48,12 +48,12 @@ To validate and evaluate the effectiveness of our system, we execute our trained
 
 ![Figure 4. Qualitative results of ours in a first setting which is getting
 the existing video data, not real-time video. Please note that this
-result is not a post-processing version displaying a safe distance.]()
+result is not a post-processing version displaying a safe distance.](https://github.com/chchin33/chchin33.github.io/blob/Blog_branch/images/DE%20Figure%204.png?raw=true)
 
 ![Figure 5. Qualitative results of ours in a second setting which is
 operating on the real-time video from the camera.We drive Gwanju
 with our system. If a front car is so close, we display warning
-message instead of safe distance. Since this is our first prototype.]()
+message instead of safe distance. Since this is our first prototype.](https://github.com/chchin33/chchin33.github.io/blob/Blog_branch/images/DE%20Figure%205.png?raw=true)
 
 Figure 4 shows the prediction of our system on Jetson Nano in the first setting which is inputting the existing video, not real-time video. Please note that this result is not a postprocessing version displaying a safe distance which demonstrates the next chapter. Since Jetson Nano is a lightweight device having similar hardware specs to a mobile device, we believe that our system has the same results when operating it on other On-Device. Figure 5 shows the prediction when our model is operated on a second setting. We actually drive Gwanju with our system. If the front car is so close, our system displays a warning message instead of safe distance. Since it is our prototype and not implemented. We will implement it in the future.
 
