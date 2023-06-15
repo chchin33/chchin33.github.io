@@ -37,7 +37,7 @@ To accurately identify the car in front and estimate its depth information, we n
 
 Through this training process, our model achieves impressive performance on the Cityscapes dataset on GPU system of Jetson Nano which is similar to the snapdragon 865 GPU. In Table 1, Our model shows a latency of 116 ms, 65.31 mIoU for segmentation accuracy, and 1.2337 rmse for depth estimation. These results demonstrate the effectiveness and accuracy of our trained AI model in identifying the car in front and providing reliable depth information. Using this depth information, we calculate a safe distance and display it in a real-time manner.
 
-![Figure 3. Illustration of our modified model. We attach a depth estimation module to the SoTA segmentation model [2]. (https://github.com/chchin33/chchin33.github.io/blob/Blog_branch/images/DE%20Figure%203.png?raw=true)  
+![Figure 3. Illustration of our modified model. We attach a depth estimation module to the SoTA segmentation model [2].](https://github.com/chchin33/chchin33.github.io/blob/Blog_branch/images/DE%20Figure%203.png?raw=true)  
 **Figure 3. Illustration of our modified model. We attach a depth estimation module to the SoTA segmentation model [2].**
 
 In addition, to train our model on two different task (depth estimation and segmentation), we design loss function as follows. CE is for segmentation and MAE is for depth estimation.
