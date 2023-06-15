@@ -46,7 +46,7 @@ $Combined Loss = CE + MAE$
 
 $CE = -\sum_i{C_i log(s_i)}$  
 
-$MAE = -\frac{1}{n} \sum{|y_j - \hat{y_j}|}_{j=1}^n$
+$MAE = -\frac{1}{n} \sum_{j=1}^n {|y_j - \hat{y_j}|}$
 
 
 ## 4. System evaluation  
