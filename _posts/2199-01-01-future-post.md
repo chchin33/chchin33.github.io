@@ -31,9 +31,8 @@ The overall system works in four steps, as illustrated in Figure 2. First, real-
 To accurately identify the car in front and estimate its depth information, we need an AI model that simultaneously performs depth estimation and semantic segmentation. Segmentation is responsible for identifying the car in front, while depth estimation infers the depth of the identified car. To achieve this, we attach a depth estimation module to the existing SoTA semantic segmentation model [2], as shown in Figure 3. Then, we train our modified model on Cityscape [1] dataset which contains a comprehensive collection of segmentation mask and depth GT information in the road environment. This will help the model to adapt to the real-world road driving simulation.  
 
 **Table 1. Performance results on the test set of Cityscape dataset [1].**  
-| Model | Latency (ms) | mIoU | rmse | Iteration|
-| :-----: | :------------: | :----: | :----: | :--------: |
-| Ours  |   116 | 65.31 | 1.23 | 160k |
+![Table 1](https://github.com/chchin33/chchin33.github.io/blob/Blog_branch/images/Table%201.PNG?raw=true)
+
 
 Through this training process, our model achieves impressive performance on the Cityscapes dataset on GPU system of Jetson Nano which is similar to the snapdragon 865 GPU. In Table 1, Our model shows a latency of 116 ms, 65.31 mIoU for segmentation accuracy, and 1.2337 rmse for depth estimation. These results demonstrate the effectiveness and accuracy of our trained AI model in identifying the car in front and providing reliable depth information. Using this depth information, we calculate a safe distance and display it in a real-time manner.
 
