@@ -37,7 +37,9 @@ Through this training process, our model achieves impressive performance on the 
 In addition, to train our model on two different task (depth estimation and segmentation), we design loss function as follows. CE is for segmentation and MAE is for depth estimation.
 
 $Combined Loss = CE + MAE$  
+
 $CE = -\sum_i{C_i log(s_i)}$  
+
 $MAE = -\frac{1}{n}\sum_{j=1}^n{|y_j - \hat{y_j}|}$
 
 
@@ -56,20 +58,20 @@ message instead of safe distance. Since this is our first prototype.]()
 Figure 4 shows the prediction of our system on Jetson Nano in the first setting which is inputting the existing video, not real-time video. Please note that this result is not a postprocessing version displaying a safe distance which demonstrates the next chapter. Since Jetson Nano is a lightweight device having similar hardware specs to a mobile device, we believe that our system has the same results when operating it on other On-Device. Figure 5 shows the prediction when our model is operated on a second setting. We actually drive Gwanju with our system. If the front car is so close, our system displays a warning message instead of safe distance. Since it is our prototype and not implemented. We will implement it in the future.
 
 
-########## 5. Application demonstration  
-In order to provide more valuable and practical assistance to drivers, we have chosen to focus on real-time operation with an On-Device, rather than a web application as initially proposed. We believe that displaying a safe distance in real-time while driving can be highly beneficial for many drivers. Our future plan is to integrate our system with a black box as the off-the-shelf camera and display the safe distance on a mobile app in a real-time manner, providing drivers with immediate feedback.
+## 5. Application demonstration  
+In order to provide more valuable and practical assistance to drivers, we have chosen to focus on real-time operation with an On-Device, rather than a web application as initially proposed. We believe that displaying a safe distance in realtime while driving can be highly beneficial for many drivers. Our future plan is to integrate our system with a black box as the off-the-shelf camera and display the safe distance on a mobile app in a real-time manner, providing drivers with immediate feedback.
 
 ## 6. Reflection
-In this project, we have successfully implemented our system to run on the On-Device (Jetson Nano). As part of our future plans, we aim to connect the black box with the Jetson Nano to capture real-time video of the driving conditions. We intend to develop a mobile app that displays the safe distance in real time as a tool to assist the driver. To achieve this, we need to build our system which includes the mobile app and the black box. In addition, we will design a user-friendly interface for the app to make it convenient for the users. In our system, it is important to minimise distraction so that the driver’s view is not obstructed and can be easily glanced at without causing undue distraction. Therefore, designing a clear user interface that does not distract the driver is crucial for our system in the future.
+In this project, we have successfully implemented our system to run on the On-Device (Jetson Nano). As part of our future plans, we aim to connect the black box with the Jetson Nano to capture real-time video of the driving conditions.We intend to develop a mobile app that displays the safe distance in real time as a tool to assist the driver. To achieve this, we need to build our system which includes the mobile app and the black box. In addition, we will design a user-friendly interface for the app to make it convenient for the users. In our system, it is important to minimise distraction so that the driver’s view is not obstructed and can be easily glanced at without causing undue distraction. Therefore, designing a clear user interface that does not distract the driver is crucial for our system in the future.
 
 ## 7. Broader Impacts  
-We explain (1) Intended use, (2) Unintended use and the associated harms, and (3) Design decisions to mitigate harms  
+We explain (1) Intended use, (2) Unintended use and the associated harms, and (3) Design decisions to mitigate harms
 
 ### 7.1. Intented Use  
 - Enhanced Road Safety: Our application is to promote road safety by providing drivers with real-time information about the safe distance between their vehicle and the car in front. This can help reduce the risk of accidents caused by insufficient following distance in this section.
 
 ### 7.2. Unintened use and the associated harms  
-- Overreliance on Technology: There is a risk that some drivers may become overly reliant on the application and neglect other important aspects of safe driving, such as paying attention to road conditions and traffic signs. This could lead to complacency and an increased likelihood of accidents.
+- There is a risk that some drivers may become overly reliant on the application and neglect other important aspects of safe driving, such as paying attention to road conditions and traffic signs. This could lead to complacency and an increased likelihood of accidents.  
 - Distracted Driving: If the display of the safe distance is not designed with proper consideration for driver attention and distraction, it could potentially cause distraction and compromise the driver’s focus on the road.
 
 ### 7.3. Design Decisions to Mitigate Harms:  
